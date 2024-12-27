@@ -33,6 +33,14 @@ export function createPost(body, callback) {
     return post;
   });
 
+  // if using API (that works)
+  // const request = fetch(`${ROOT_URL}?key=${API_KEY}`, { 
+  //   method: 'POST', 
+  //   headers: { 'Content-Type': 'application/json' }, 
+  //   body: JSON.stringify(body) 
+  // }).then(response => response.json())
+  // .then(callback);
+
   return {
     type: POST_CREATED,
     payload: promise
